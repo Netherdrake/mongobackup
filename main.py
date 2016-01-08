@@ -12,8 +12,8 @@ import shlex
 import os
 from os.path import join, basename
 
-SLEEP_DURATION = 3600 * 12  # 12 hours sleep
-MAX_BACKUPS = 10
+SLEEP_DURATION = os.getenv('SLEEP_DURATION', 3600 * 12)  # 12 hours sleep
+MAX_BACKUPS = os.getenv('MAX_BACKUPS', 10)
 
 
 def backup():
