@@ -12,10 +12,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
     rm -rf /tmp/* && \
     mkdir /backup
 
-ENV S3_PATH=mongodb
-ENV AWS_DEFAULT_REGION=us-east-1
-
-ADD mongodb-sync.py /mongodb-sync.py
+ADD main.py /main.py
 
 VOLUME ["/backup"]
 
